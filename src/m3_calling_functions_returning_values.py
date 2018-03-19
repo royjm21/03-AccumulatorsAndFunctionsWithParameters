@@ -251,7 +251,7 @@ def digits_in_power(n, k):
 def run_test_fancy_sums_of_digits():
     """ Tests the   fancy_sums_of_digits   function. """
     # ------------------------------------------------------------------
-    # TODO: 7. Implement this function.
+    # Done: 7. Implement this function.
     #   It TESTS the  fancy_sums_of_digits  function defined below.
     #   Include at least **   3   ** tests.
     #
@@ -271,6 +271,23 @@ def run_test_fancy_sums_of_digits():
     # in the doc-string to be sure that you understand the specification.
     # ------------------------------------------------------------------
 
+    #Test 1
+    expected = 1
+    answer = fancy_sums_of_digits(10)
+    print("Test 1 expected:", expected)
+    print("actual", answer)
+
+    #Test 2
+    expected = 1
+    answer = fancy_sums_of_digits(100)
+    print('Test 2 expected',expected)
+    print('actual', answer)
+
+    #Test 3
+    expected = 1
+    answer = fancy_sums_of_digits(1000)
+    print('test 3 expected', expected)
+    print('actual', answer)
 
 def fancy_sums_of_digits(n):
     """
@@ -296,6 +313,7 @@ def fancy_sums_of_digits(n):
             -- the sum of the digits in (X ** Y) is 124309 (trust me!)
             -- so this function returns 124309.
     """
+    return sum_of_digits((n**1000)**(n**999))
     # ------------------------------------------------------------------
     # TODO: 8. Implement and test this function.
     #
@@ -304,7 +322,6 @@ def fancy_sums_of_digits(n):
     #    the    sum_of_digits    function that is DEFINED ABOVE.
     ####################################################################
     # ------------------------------------------------------------------
-
 # ----------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
 # This unusual form is necessary for the special testing we provided.
