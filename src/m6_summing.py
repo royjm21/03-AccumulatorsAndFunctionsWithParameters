@@ -31,18 +31,21 @@ def run_test_sum_cosines():
     print('Testing the   sum_cosines   function:')
     print('--------------------------------------------------')
 
+    print(' ')
     print('Test 1:')
     expected = 0.13416
     actual = sum_cosines(3)
     print('expected:', expected)
     print('answer:', actual)
 
+    print(' ')
     print('Test 2:')
     expected = -0.5194806481
     actual = sum_cosines(4)
     print('expected:', expected)
     print('answer:', actual)
 
+    print(' ')
     print('Test 3:')
     expected = 0.7153279971
     actual = sum_cosines(15)
@@ -77,7 +80,7 @@ def sum_cosines(n):
 def run_test_sum_square_roots():
     """ Tests the   sum_square_roots   function. """
     # ------------------------------------------------------------------
-    # TODO: 4. Implement this function.
+    # TODOne: 4. Implement this function.
     #   It TESTS the  sum_square_roots  function defined below.
     #   Include at least **   3   ** tests.
     #
@@ -88,6 +91,27 @@ def run_test_sum_square_roots():
     print('--------------------------------------------------')
     print('Testing the   sum_square_roots   function:')
     print('--------------------------------------------------')
+
+    print(' ')
+    print('Test 1:')
+    expected = math.sqrt(2) + math.sqrt(4) + math.sqrt(6)
+    actual = sum_square_roots(3)
+    print('expected:', expected)
+    print('answer:', actual)
+
+    print(' ')
+    print('Test 2:')
+    expected = math.sqrt(2) + math.sqrt(4) + math.sqrt(6) + math.sqrt(8) + math.sqrt(10)
+    actual = sum_square_roots(5)
+    print('expected:', expected)
+    print('answer:', actual)
+
+    print(' ')
+    print('Test 3:')
+    expected = math.sqrt(2) + math.sqrt(4) + math.sqrt(6) + math.sqrt(8) + math.sqrt(10) + math.sqrt(12) + math.sqrt(14) + math.sqrt(16) + math.sqrt(18)
+    actual = sum_square_roots(9)
+    print('expected:', expected)
+    print('answer:', actual)
 
 
 def sum_square_roots(n):
@@ -104,14 +128,17 @@ def sum_square_roots(n):
       which is about 11.854408.
     """
     # ------------------------------------------------------------------
-    # TODO: 5. Implement and test this function.
+    # TODOne: 5. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     #   That is called TEST-DRIVEN DEVELOPMENT (TDD).
     #
     #   No fair running the code of  sum_square_roots  to GENERATE
     #   test cases; that would defeat the purpose of TESTING!
     # ------------------------------------------------------------------
-
+    total = 0
+    for k in range(n+1):
+        total = total + math.sqrt(k*2)
+    return total
 
 # ----------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
