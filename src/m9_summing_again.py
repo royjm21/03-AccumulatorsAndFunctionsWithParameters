@@ -13,7 +13,7 @@ import math
 def main():
     """ Calls the   TEST   functions in this module. """
     run_test_sum_powers()
-    # run_test_sum_powers_in_range()
+    run_test_sum_powers_in_range()
 
 
 def run_test_sum_powers():
@@ -82,7 +82,7 @@ def sum_powers(n, p):
 def run_test_sum_powers_in_range():
     """ Tests the   sum_powers_in_range   function. """
     # ------------------------------------------------------------------
-    # TODO: 4. Implement this function.
+    # TODOne: 4. Implement this function.
     #   It TESTS the  sum_powers_in_range  function defined below.
     #   Include at least **   3   ** tests.
     #
@@ -115,6 +115,7 @@ def run_test_sum_powers_in_range():
     print('expected:', expected)
     print('actual:', actual)
 
+
 def sum_powers_in_range(m, n, p):
     """
     What comes in:  Non-negative integers m and n, with n >= m,
@@ -128,14 +129,17 @@ def sum_powers_in_range(m, n, p):
       -- sum_powers_in_range(3, 100, 0.1) returns about 142.384776
     """
     # ------------------------------------------------------------------
-    # TODO: 5. Implement and test this function.
+    # TODOne: 5. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     #
     #   No fair running the code of  sum_powers_in_range  to GENERATE
     #   test cases; that would defeat the purpose of TESTING!
     # ------------------------------------------------------------------
 
-
+    x = 0
+    for k in range(m, n + 1, 1):
+        x = x + k**p
+    return x
 # ----------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
 # ----------------------------------------------------------------------
