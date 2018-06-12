@@ -21,7 +21,7 @@ def main():
     run_test_fancy_sums_of_digits()
 
     # ------------------------------------------------------------------
-    # TODO: 9. DO THIS LAST!
+    # TODOne: 9. DO THIS LAST!
     #    -- Uncomment the line of code below to run the main function
     #         in m3t_tester.py (do not make changes to it).
     #         It runs OUR tests on your code.
@@ -32,7 +32,7 @@ def main():
     #       ** Ask a TA or your professor for help in that case. **
     # ------------------------------------------------------------------
 
-    # m3t_tester.main()
+    m3t_tester.main()
 
 
 def run_test_sum_of_digits():
@@ -289,6 +289,12 @@ def run_test_fancy_sums_of_digits():
     print('test 3 expected', expected)
     print('actual', answer)
 
+
+def blah(x):
+    print(x*x)
+
+print(blah(5))
+
 def fancy_sums_of_digits(n):
     """
     What comes in:  A positive integer n.
@@ -313,7 +319,9 @@ def fancy_sums_of_digits(n):
             -- the sum of the digits in (X ** Y) is 124309 (trust me!)
             -- so this function returns 124309.
     """
-    return sum_of_digits((n**1000)**(n**999))
+    x = (n ** 1000)
+    y = (n ** 999)
+    return sum_of_digits(x ** y)
     # ------------------------------------------------------------------
     # TODO: 8. Implement and test this function.
     #
